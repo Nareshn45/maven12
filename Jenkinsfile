@@ -21,7 +21,7 @@ pipeline
         {
             steps
             {
-                sh 'scp /home/ubuntu/.jenkins/workspace/Declarativepipeline1/webapp/target/webapp.war ubuntu@172.31.26.88:/var/lib/tomcat9/webapps/testapp.war'
+                sh 'scp /home/ubuntu/.jenkins/workspace/Declarativepipeline/webapp/target/webapp.war ubuntu@172.31.26.88:/var/lib/tomcat9/webapps/testapp.war'
             }
         }
         stage('ContinuousTesting')
@@ -37,7 +37,7 @@ pipeline
             steps
             {
                 input message: 'Waiting for approval form the DM!', submitter: 'hari'
-                sh 'scp /home/ubuntu/.jenkins/workspace/Declarativepipeline1/webapp/target/webapp.war ubuntu@172.31.16.215:/var/lib/tomcat9/webapps/prodapp.war'
+                sh 'scp /home/ubuntu/.jenkins/workspace/Declarativepipeline/webapp/target/webapp.war ubuntu@172.31.16.215:/var/lib/tomcat9/webapps/prodapp.war'
             }
         }
     }
